@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1, .box2{
+            width: 200px;
+            height: 200px;
+        }
+        /* 
+            外边距的重叠（折叠）
+                - 相邻的垂直方向外边距会发生重叠现象
+                - 兄弟元素
+                    - 兄弟元素间的相邻垂直外边距会取两者之间的较大值
+                    - 特殊情况 
+                     一正一负取和
+                     两个负 取最小值 
+                    - 兄弟元素的外边距对开发是有利的，不需要进行处理
+                - 父子元素
+                    - 父子元素间相邻外边距，子元素会传递给父元素
+                    处理方法
+                        - 使用父元素的内边距
+                        - 
+         */
+
+        .box1{
+            background-color: #bfa;
+            /* 设置一个下外边距 */
+            margin-bottom: 100px;
+        }
+        .box2{
+            background-color: orange;
+            /* 设置一个上外边距 */
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

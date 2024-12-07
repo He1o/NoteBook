@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        将class为no2的div的字体大小设置为30px
+
+            交集选择器
+                作用：选中同时复合多个条件的元素
+                语法：选择器1选择器2选择器3选择器n{}
+                交集选择器中如果有元素选择器，必须使用元素选择器开头
+
+            并集选择器
+                作用：同时选择多个选择器对应的元素
+                语法：选择器1，选择器2，选择器3，选择器n{}
+
+        */
+        div.red{
+            font-size: 30px;
+        }
+        p, div{
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p id="no1">关山难越</p>
+    <p>谁悲失路之人</p>
+    <p>萍水相逢</p>
+    <p>尽是他乡之客</p>
+    <div class="no2">秋水共长天一色</p>
+    <p class="no2">落霞与孤鹜齐飞</p>
+
+</body>
+</html>

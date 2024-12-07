@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+            数据类型指的就是字面量的类型
+            在js中一共有六种数据类型
+                String 字符串
+                Number 数值
+                Boolean  布尔值
+                Null   空值
+                Undefined 未定义
+                Object 对象
+            
+            其中String Number Boolean Null Undefined属于基本数据类型
+            Object属于引用数据类型
+
+            就相当于python中可变数据类型和不可变数据类型
+
+            js中的变量都是保存到栈内存中的
+            值与值之间独立存在，修改一个变量不会影响其他变量
+
+            对象是保存在堆内存中的
+            每创建一个新的对象，就会在堆内存中开辟出一个新的空间
+            而变量保存的是对象的内存地址（对象的引用）
+            如果两个变量保存的是同一个对象引用
+            当一个通过一个变量修改属性时，另一个也会受到影响。
+        */
+        var a = 123;
+        var b = a;
+        a++
+        // b = 123
+
+        /*
+            typeof 检查一个变量的类型
+            语法： typeof 变量
+
+            Number
+                Number.MAX_VALUE
+                js中可以表示的数字最大值
+
+                Infinity 正无穷
+
+                NaN  表示特殊的数 Not a Number
+        */
+
+        var str = "hello";
+
+        typeof str;
+
+        var n = 123;S
+
+        var c = 0.1 + 0.2;
+
+        /*
+            Boolean 布尔值
+        */
+
+        var flag = true;
+
+
+        /*
+            Null类型的值只有一个，就是null
+            表示一个为空的对象
+            typeof检查null值时，会返回object
+
+            Undefined类型的值只有一个，undefined
+            当声明一个变量，但不给变量赋值时，它的值就是undefined
+            typeof检查也会返回undefined
+        */
+
+        var a = null;
+
+        var b;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

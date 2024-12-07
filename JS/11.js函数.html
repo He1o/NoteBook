@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            函数
+                - 函数也是一个对象
+                - 函数中可以封装一些功能(代码)，在需要时可以执行这些功能(代码)
+                - 函数中可以保存一些代码在需要的时候调用
+                - 使用typeof检查函数对象时，会返回function
+                构造函数方法
+                var fun = new Function()
+
+                函数声明语法
+                function 函数名(形参1,[形参2...形参n]){
+                    语句
+                }
+        */
+        // var fun = new Function()
+        function fun(){
+            console.log('fun');
+        }
+
+        /*
+            形参实参
+            调用函数时，解析器不会检查实参的数量
+            多余实参不会被赋值
+            如果实参数量少于形参的数量，则没有对应实参的形参将是undefined
+
+            如果return语句后不跟任何值就相当于返回一个undefined
+            如果函数中不写return，则也会返回undefined
+         */
+        function sum(a,b){
+            console.log(a+b);
+            return a + b;
+        }
+        var result = sum(2,3);
+        
+        function isOu(num){
+            return num % 2 == 0;
+        }// 判断偶数
+
+        /*
+            创建一个函数，可以在控制台中输出一个人的信息
+                可以输入人的name，age，gender，address
+
+            函数的参数可以是任意数据类型
+         */
+        function sayHelly(name, age, gender, address){
+            concole.log();
+        }
+
+
+
+        var obj = {
+            name:'孙悟空',
+            age:28,
+            gender:'男',
+            address:'高老庄'
+        }
+
+        function sayHelly(o){
+            concole.log(o.name, o.age);
+        }
+        sayHelly(obj)
+
+        /*
+            sayHelly()
+                调用函数
+                相当于使用函数的返回值
+            sayHelly
+                函数对象
+                相当于直接使用函数对象
+
+            函数相当于有功能的对象，相当于传递制造冰淇淋的机器
+
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 200px;
+            background-color: #bfa;
+            border: solid 10px red;
+        }
+        .inner{
+            /* width: 200px; */
+            width: 200px;
+            height: 200px;
+            background-color: #bbb;
+            margin: 0 auto;
+            /* 
+                元素水平方向布局
+                    元素在其父元素中水平方向位置由以下几个属性共同决定
+                        margin-left
+                        border-left
+                        paddint-left
+                        width
+                        paddint-right
+                        border-right
+                        margin-right
+
+                一个元素在其父元素中，水平布局必须要满足以下等式
+                        margin-left
+                        border-left
+                        paddint-left
+                        width
+                        paddint-right
+                        border-right
+                        margin-right  
+                            = 父元素内容区的宽度
+
+                        0 + 0 + 0 + 200 + 0 + 0 + 0 = 800
+                        0 + 0 + 0 + 200 + 0 + 0 + 600 = 800
+                        - 以上等式必须满足，如果相加结果等式不成立
+                            称为过度约束 等式会自动调整
+                            浏览器会自动调整margin-right使等式满足
+
+                        - 七个值中有三个值和设置为auto
+                            width
+                            margin-left
+                            margin-right
+                            - width默认就是auto
+                            - 如果某个为auto 会自动调整为auto的那个值以使等式成立
+                        
+                            - 如果将一个宽度和外边距设置为auto 则宽度会调到最大
+                            - 如果三个值都设置为auto 则外边距都是0 宽度最大
+                            - 如果将两个外边距设置为auto 宽度固定值，则会将外边距设置为相同的值
+                                可以用来水平居中
+                                margin: 0 auto;
+
+             */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    
+</body>
+</html>

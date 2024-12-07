@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+        第二种方式
+            - 将样式编写在head的style标签中
+            - 通过CSS的选择器来选中元素并为其设置各种样式
+            - 可以同时为多个标签设置样式
+            - 内联样式表更加方便对样式进行复用
+            - 问题：
+                内部样式表只能对一个网页起作用，不能跨页面复用
+     -->
+     <style>
+         p{color: green;font-size: 60px;}
+     </style>
+
+     <!-- 
+         第三种方式(外部样式表)
+            可以将CSS样式编写到一个外部的CSS文件中
+            然后通过link标签来引入外部CSS文件
+            将样式编写到外部CSS，可以使用浏览器的缓存机制
+            加快网页的加载速度，提高用户的体验
+      -->
+      <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <!-- 
+        网页分为三部分
+            结构(HTML)
+            表现(CSS)
+            行为(JavaScript)
+        CSS
+            - 层叠样式表
+            - 网页是一个多层结构，通过 CSS可以分别为网页的每一层来设置样式
+     -->
+
+     <!-- 
+         使用CSS来修改元素的样式
+
+         第一种方式(内联样式，行内样式)
+         - 在标签内部通过style属性来设置元素的样式
+         - 设定的值即为CSS
+            使用内联样式只能对一个标签生效，每个元素都要复制
+      -->
+
+      <p style="color: red; font-size: 60px;">少小离家老大回，乡音无改鬓毛衰</p>
+      <p>落霞与孤鹜齐飞</p>
+</body>
+</html>

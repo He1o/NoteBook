@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+            强制类型转换
+            - 指将一个数据类型转换为其他的数据类型
+        */
+
+        /*
+
+            将其他数据类型转换为string
+                方式一， 
+                - 调用被转换数据类型的toString()方法
+                - 不会影响原变量，将转换结果返回
+                - null和undefined没有toString()方法
+
+                方式二：
+                - 调用String()函数
+                - 可以将null转换为“null”
+
+        */
+
+        var a = 123;
+        var b = a.toString();
+
+        var a = true;
+        var b = a.toString();        
+
+        var a = 123;
+        var b = String(a);        
+
+        var a = null;
+        var b = String(a);
+
+        /*
+            将其它数据类型转换为Number
+                方式一
+                - Number()函数
+                    string
+                        - 如果是纯数字的字符串，则直接转换为数字
+                        - 如果不是数字转换为NaN
+                        - 如果是一个空字符串或者全是空格的字符串，则转换为0
+                    boolean
+                        - 布尔值转换为0，1
+                
+                    null -->  0
+                    undefined --> 数字 NaN
+
+                
+                方式二
+                - 专门用于字符串
+                - parseInt()    把一个字符串转换为整数
+                    - 从第一位起只读取整数
+                    "234wf234" -> 234
+                    "234.234wf234" -> 234
+                    "wf234" -> NaN
+                - parseFloat()  把一个字符串转换为浮点数
+
+                - 如果对非字符串使用parseInt，将其先转换为字符串再操作
+
+        */
+
+        var a = "123";
+        a = Number(a);
+
+        var a = false;
+        a = Number(a);
+
+
+        var a = "234wf234";
+        a = parseInt(a)
+
+        /*
+            16进制数字，使用0x开头
+
+            8进制数字，使用0开头
+
+            二进制数字，使用0b开头
+
+            在ie中将无法识别二进制数字，且将parseInt(“070”) 默认八进制
+
+            需要parseInt(“070”, 10)指定进制
+        */
+       
+        var a = 0b10
+
+
+        /*
+            将其他类型转换为Boolean
+            - 使用Boolean()函数
+                - 数字 --> 布尔
+                    除了0和NaN 都转变为true
+                - 字符串 --> 布尔
+                    除了空字符串，其余都是true
+                - null和undefined都转换为false
+                - 对象也转换为true
+
+
+        */
+        var a = 123
+        a = Boolean(a)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

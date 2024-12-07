@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        audio 标签来向页面引入一个外部的音频文件
+            音视频文件引入时，默认情况不允许用户自己控制播放
+            属性
+                - controls 是否允许用户控制播放，无值属性
+                - autoplay 音频文件自动播放
+                - loop 是否循环播放
+
+        可以通过source来指定文件,并同时指定多个音频，
+
+     -->
+     <audio src="./image/don't cry.m4a" controls autoplay></audio>
+     <audio controls>
+         您的浏览器不支持播放音频，请升级浏览器
+         <source src="./image/don't cry.m4a">
+         <source src="./image/don't cry.m4a">
+     </audio>
+     <!-- 
+         vidio 标签向网页中引入一个视频
+            属性与audio基本一样 
+      -->
+      <!-- 
+          embed 可以嵌入播放器在不支持以上元素的浏览器中播放
+       -->
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            background-color: #bfa;
+            /* 
+                默认情况下父元素的高度被内容撑开
+
+                设置父元素高度之后
+                如果子元素大小超过父元素，则子元素会从父元素中溢出
+                使用 overflow 属性来设置父元素如何处理溢出的子元素
+                    visible 默认值，子元素会从父元素中溢出，在父元素外部的位置显示
+                    hidden 溢出的内容会被裁剪，不会显示
+                    scroll 生成两个滚动条，通过滚动条来查看完整的内容
+                    auto   根据需要生成滚动条
+
+                overflow-x  单独处理水平方向
+                overflow-y
+
+             */
+        }
+        .inner{
+            width: 100px;
+            background-color: yellow;
+            height: 200px;
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        通过.outer>.inner快速输入
+     -->
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

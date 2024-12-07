@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            伪元素 表示页面中一些特殊的并不真实存在的元素（特殊的位置）
+                伪元素使用 ：：开头
+
+                ：：first-letter 表示第一个字母
+                ：：first-line 表示第一行
+                ：：selection 表示选中的内容
+                ：：before 元素的开始位置
+                ：：after 元素的最后位置
+                    -结合content属性来使用
+                    -content 添加内容
+                    - 通过css添加无法被选中
+         */
+        p::first-letter{
+            font-size: 50px;
+        }
+        p::first-line{
+            background-color: yellow;
+        }
+        p::before{
+            content: 我爱你;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        秋水共长天一色
+    </p>
+</body>
+</html>

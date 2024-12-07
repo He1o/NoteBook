@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            将所有的段落设置为红色
+
+            元素选择器
+                作用：根据标签名来选中指定的元素，会选择所有该元素
+                语法：标签名{}
+                例子：p{}  h1{}   div{}        
+
+            id选择器
+                作用：根据id属性值来选择一个元素,只能选择唯一一个元素
+                语法：#id属性值{}
+                例子：#red{}
+
+            类选择器
+                作用：根据元素的class属性值选中一组元素
+                语法：.calss属性值{}
+
+            通配选择器
+                作用：选择页面中所有元素
+                语法：*
+            
+        */
+
+        p{
+            color: black;
+        }
+
+        #no1{
+            color: lightpink;
+        }
+        
+        .no2{
+            color: blue;
+        }
+        *{
+            color: blueviolet;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <p id="no1">关山难越</p>
+    <p>谁悲失路之人</p>
+    <p>萍水相逢</p>
+    <p>尽是他乡之客</p>
+    <!-- 
+        class是一个标签属性，与id类似，不同的是class可以重复使用，类
+            可以通过class属性来作为元素分组
+            可以同时为一个元素指定多个class属性
+     -->
+    <p class="no2">秋水共长天一色</p>
+    <p class="no2">落霞与孤鹜齐飞</p>
+</body>
+</html>
