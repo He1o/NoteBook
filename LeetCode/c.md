@@ -1,8 +1,12 @@
 ### 1. 数值
-```
+```c++
 int a; //1258249841
 ```
-int不赋初值的话，a可能是任意值 
+int不赋初值的话，a可能是任意值，必须要初始化
+
+```c++
+1e9 // 指数表达方式
+```
 
 ### 1. 字符串
 
@@ -14,12 +18,21 @@ int不赋初值的话，a可能是任意值
 
 string和vector一样都有 push_back 和 pop_back
 
-### 2. 定义数组
-```
+### 2. 数组
+```c++
 int a[] = {2, 3, 4}
+
+#include <algorithm>
+auto minIt = std::min_element(vec.begin(), vec.end());
+
+auto minIt = std::min_element(vec.begin(), vec.end(),
+                                   [](int a, int b) {
+                                       return std::abs(a) < std::abs(b);
+                                   });
+
 ```
 
-### 2. 定义哈希表
+### 3. 哈希表
 1. 定义
 ```
 unordered_map<string, int> hashtable = {
@@ -63,3 +76,5 @@ stk.top();
 ```
 shared_ptr<vector<string>>(new vector<string>{""})
 ```
+
+
